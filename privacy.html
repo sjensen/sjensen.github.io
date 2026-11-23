@@ -26,66 +26,140 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="sub">Hermes Personal Assistant — single-user, locally operated software</p>
+<p class="sub">Hermes Personal Assistant — single-user, locally operated desktop software</p>
 
-<p>This policy describes how Hermes Personal Assistant ("the application") handles Google user
-data. The application is used by exactly one person: the individual who installs and runs it on
-their own computer ("the owner").</p>
+<p>This Privacy Policy explains what information Hermes Personal Assistant ("the application",
+"Hermes") collects, why it collects it, how it is used and stored, how long it is kept, and how it
+can be deleted. It applies to the one person who installs and operates the application on their own
+computer ("the owner", "you"). The application has no other users.</p>
 
-<h2>What data the application accesses</h2>
+<h2>1. Summary</h2>
 <ul>
-  <li><strong>Gmail</strong> — message metadata and content, read to summarize, search, and locate
-      items the owner asks about; send access, used only for messages the owner explicitly approves</li>
-  <li><strong>Google Calendar</strong> — events, to build the owner's schedule and detect conflicts,
-      and to create or change events at the owner's request</li>
-  <li><strong>Google Tasks</strong> — task lists, to read and update the owner's tasks</li>
-  <li><strong>Google Docs and Drive</strong> — read-only access to files the owner names or searches for</li>
-  <li><strong>Google account identity</strong> — the email address of the account being accessed</li>
+  <li>Hermes accesses your Google data only to perform tasks you ask for, on your own machine</li>
+  <li>There is no server operated by the author; no data is sent to the author</li>
+  <li>Nothing is sold, rented, shared, or used for advertising or profiling</li>
+  <li>Google user data is never used to train or improve generalized AI models</li>
+  <li>You can revoke access and delete local data at any time (section 9)</li>
 </ul>
 
-<h2>Where the data goes</h2>
-<p>Google user data is processed on the owner's own computer. It is not transmitted to, stored on,
-or processed by any server operated by the author of this application. The application has no
-backend service, no database, and no analytics.</p>
-
-<p>Content that the owner chooses to send to a language-model provider for processing is
-transmitted directly from the owner's machine to that provider under the owner's own account and
-that provider's terms. The owner selects and configures that provider.</p>
-
-<h2>Storage and retention</h2>
+<h2>2. Information the application accesses</h2>
+<p>With your permission, granted through Google's OAuth consent screen, Hermes accesses the
+following data from your own Google Account:</p>
 <ul>
-  <li>An OAuth credential (access and refresh token) is stored in a file on the owner's computer,
-      readable only by the owner's operating-system user account</li>
-  <li>Copies of message and calendar content may exist in local logs and local databases created by
-      the application, retained only as long as the owner keeps them</li>
-  <li>No Google user data is retained by any third party on the application's behalf</li>
+  <li><strong>Gmail</strong> (<code>gmail.readonly</code>, <code>gmail.modify</code>,
+      <code>gmail.send</code>, <code>gmail.settings.basic</code>) — message headers, bodies and
+      attachments, so Hermes can summarize your inbox, find messages you ask about, label or
+      archive them on request, and send mail you have explicitly approved. The settings scope is
+      used only to create and manage your own mail filters when you ask.</li>
+  <li><strong>Google Calendar</strong> (<code>calendar</code>, <code>calendar.events</code>) —
+      your calendars and events, so Hermes can build your daily schedule, detect conflicts, and
+      create, change or delete events you request.</li>
+  <li><strong>Google Tasks</strong> (<code>tasks</code>, <code>tasks.readonly</code>) — your task
+      lists, so Hermes can read and update your tasks.</li>
+  <li><strong>Google Drive and Docs</strong> (<code>drive.readonly</code>,
+      <code>documents.readonly</code>) — read-only access to files and documents you name or search
+      for. Hermes cannot modify or delete anything in Drive.</li>
+  <li><strong>Basic account identity</strong> (<code>userinfo.email</code>,
+      <code>userinfo.profile</code>) — your email address and display name, used to address
+      summaries and confirm which account is connected.</li>
+</ul>
+<p>Hermes does not collect your contacts, location, browsing history, health data, financial
+account data, or passwords. It never asks for or stores your Google password.</p>
+
+<h2>3. How the information is used</h2>
+<p>Data is used only to carry out the functions you request in conversation with the application:</p>
+<ul>
+  <li>Producing morning and evening briefings from your mail, calendar and tasks</li>
+  <li>Answering questions about your own messages, schedule and documents</li>
+  <li>Drafting and sending email that you review and approve before it is sent</li>
+  <li>Creating or updating events and tasks you ask for</li>
+  <li>Sending notifications and reminders to you through your chosen messaging channel</li>
+</ul>
+<p>Data is never used for advertising, profiling, scoring, resale, or any purpose unrelated to
+these functions.</p>
+
+<h2>4. Where processing happens</h2>
+<p>Hermes runs on your own computer. Your Google data is processed there. The author of this
+application operates no server, no database and no analytics service, and receives none of your
+data.</p>
+<p>To summarize or draft text, the application sends the relevant excerpt to a large language model
+provider that <em>you</em> select and configure, using <em>your</em> account and that provider's
+terms. That transmission goes directly from your machine to the provider. You control which
+provider is used, can change it at any time, and can run the application with a locally hosted
+model so that no data leaves your machine.</p>
+
+<h2>5. Storage and security</h2>
+<ul>
+  <li>An OAuth credential (access token and refresh token) is stored in a file on your computer,
+      readable only by your operating-system user account (owner-only permissions)</li>
+  <li>Copies of message, calendar and task content may be written to local logs and local databases
+      created by the application, on your own disk</li>
+  <li>Access to those files is controlled by your operating system's user permissions and disk
+      encryption, if enabled</li>
+  <li>No Google user data is stored by any third party on behalf of this application</li>
 </ul>
 
-<h2>Sharing</h2>
-<p>The application does not sell, rent, trade, or transfer Google user data to any third party. It
-does not use Google user data for advertising, profiling, or training models. It does not permit
-humans to read Google user data except the owner, or where required by law.</p>
+<h2>6. Retention</h2>
+<ul>
+  <li><strong>OAuth credential</strong> — kept until you revoke access or delete the file</li>
+  <li><strong>Local logs and caches</strong> — retained on a rolling basis, typically days to weeks,
+      and deletable by you at any time</li>
+  <li><strong>Conversation history</strong> — stored locally so the application has context; kept
+      until you delete it</li>
+  <li>Nothing is retained by the author, because the author never receives it</li>
+</ul>
 
-<h2>Limited Use</h2>
-<p>The application's use and transfer of information received from Google APIs adheres to the
+<h2>7. Sharing and disclosure</h2>
+<p>Hermes does not sell, rent, trade, or transfer Google user data to any third party. It does not
+share data with advertisers, data brokers, or analytics providers. Data is disclosed only:</p>
+<ul>
+  <li>To the language-model provider you configured, for the purpose of generating the response you
+      asked for</li>
+  <li>If you explicitly instruct the application to send information somewhere (for example, an
+      email you approve)</li>
+  <li>If required by applicable law</li>
+</ul>
+<p>No human other than you reads your Google user data.</p>
+
+<h2>8. Google API Services — Limited Use</h2>
+<p>Hermes' use and transfer of information received from Google APIs adheres to the
 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services
-User Data Policy</a>, including the Limited Use requirements.</p>
+User Data Policy</a>, including the Limited Use requirements. Specifically:</p>
+<ul>
+  <li>Google user data is used only to provide or improve the user-facing features described above</li>
+  <li>Google user data is not transferred to third parties except as needed to provide those
+      features, to comply with law, or as part of a merger or acquisition with notice</li>
+  <li>Google user data is not used for advertising</li>
+  <li>Google user data is not used to develop, improve, or train generalized or non-personalized
+      artificial intelligence or machine-learning models</li>
+  <li>No human reads Google user data except the owner, for support he requests, or where required
+      by law</li>
+</ul>
 
-<h2>Revoking access and deleting data</h2>
-<p>The owner can revoke the application's access at any time at
-<a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Revoking
-access immediately invalidates the stored credential. To delete locally stored data, the owner
-deletes the credential file and the application's local data directory on their computer.</p>
+<h2>9. Your choices: revoking access and deleting data</h2>
+<ul>
+  <li><strong>Revoke access:</strong>
+      <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> →
+      select the application → Remove access. This immediately invalidates the stored credential
+      and the application stops working until you authorize it again.</li>
+  <li><strong>Delete local data:</strong> delete the credential file and the application's data
+      directory on your computer. Instructions are in the application's documentation.</li>
+  <li><strong>Request deletion or ask a question:</strong> email
+      <a href="mailto:scott.jensen2@gmail.com">scott.jensen2@gmail.com</a>. Requests are
+      acknowledged and completed within 30 days.</li>
+</ul>
 
-<p>To request deletion or ask any question about this policy, email
-<a href="mailto:scott.jensen2@gmail.com">scott.jensen2@gmail.com</a>. Requests are answered within
-30 days.</p>
+<h2>10. Children</h2>
+<p>The application is not directed to children under 13 and is not used by anyone other than its
+adult owner.</p>
 
-<h2>Children</h2>
-<p>The application is not directed to anyone under 13 and has no users other than its owner.</p>
+<h2>11. Changes to this policy</h2>
+<p>If this policy changes materially, the updated version will be posted on this page with a new
+"last updated" date. Continued use of the application after a change constitutes acceptance.</p>
 
-<h2>Changes</h2>
-<p>Material changes to this policy will be posted on this page with a new "last updated" date.</p>
+<h2>12. Contact</h2>
+<p>Hermes Personal Assistant<br>
+Email: <a href="mailto:scott.jensen2@gmail.com">scott.jensen2@gmail.com</a></p>
 
 <footer>
   <a href="./index.html">Home</a> · <a href="./terms.html">Terms of Service</a><br>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hermes Personal Assistant</title>
-<meta name="description" content="A private, single-user automation assistant that runs on its owner's own computer.">
+<meta name="description" content="Hermes Personal Assistant is a private, single-user desktop application that helps one person manage their own email, calendar, tasks, and documents.">
 <style>
   :root { color-scheme: light dark; }
   body { margin: 0 auto; max-width: 46rem; padding: 3rem 1.25rem 5rem;
@@ -28,39 +28,63 @@
 <body>
 
 <h1>Hermes Personal Assistant</h1>
-<p class="sub">A private automation assistant for one person — its owner.</p>
+<p class="sub">A private desktop application for one person — its owner.</p>
 
-<p>Hermes is a personal software agent that runs on its owner's own computer. It connects to
-<strong>that owner's own Google account</strong> to read email and calendar data and to produce a
-daily briefing, schedule reminders, and track tasks. There is no website, no sign-up, no public
-account system, and no other users.</p>
+<h2>Purpose</h2>
+<p>Hermes Personal Assistant ("the application") is a personal productivity tool that runs locally
+on its owner's own computer. Its single purpose is to help that one individual keep track of their
+own email, calendar, tasks, and documents by producing a daily briefing, surfacing items that need
+attention, and carrying out scheduling and task actions the owner explicitly requests.</p>
+
+<p>The application connects only to the Google account of the person who installs and runs it. It
+has no public sign-up, no multi-user accounts, no web service, and no other users. Everything it
+does is initiated by its owner on the owner's own machine.</p>
 
 <h2>What it does</h2>
 <ul>
   <li>Reads the owner's Gmail to summarize the day's messages and flag items needing attention</li>
-  <li>Reads the owner's Google Calendar to assemble a daily schedule and flag conflicts</li>
-  <li>Creates and updates events and tasks on that same account when the owner asks</li>
-  <li>Sends email from the owner's account, only when the owner explicitly approves each message</li>
-  <li>Reads Google Docs and Drive files that the owner names</li>
+  <li>Reads the owner's Google Calendar to assemble a daily schedule and identify conflicts</li>
+  <li>Creates, updates, and deletes calendar events and tasks on that same account when the owner asks</li>
+  <li>Reads and updates the owner's Google Tasks lists</li>
+  <li>Reads Google Docs and Drive files that the owner names or searches for</li>
+  <li>Sends email from the owner's account, only after the owner explicitly approves each message</li>
 </ul>
 
-<h2>Who can use it</h2>
-<p>One person. Access is granted to the Google account of the individual who runs the software.
-The application is not distributed, not published to any app store, and not offered as a service
-to anyone else.</p>
-
-<h2>How it is designed</h2>
+<h2>How it works</h2>
 <ul>
-  <li>Runs locally on the owner's machine; Google data is processed there</li>
-  <li>Holds a long-lived OAuth credential in a file readable only by the owner's user account</li>
-  <li>Requests read access to mail, calendar, Docs and Drive, plus send access for approved mail only</li>
-  <li>Never sells, shares, or transfers Google user data to any third party</li>
+  <li>Installed and run by the owner on the owner's own computer; there is no server operated by
+      the author of this application</li>
+  <li>Authorizes through Google OAuth using the owner's own credentials and stored consent</li>
+  <li>Keeps its OAuth credential in a file readable only by the owner's operating-system account</li>
+  <li>Requests read access to Gmail, Calendar, Tasks, Docs, and Drive, plus gmail.send for
+      messages the owner approves, and gmail.settings.basic to manage the owner's own mail filters</li>
+  <li>Never sells, rents, or shares Google user data with any third party, and never uses it for
+      advertising or profiling</li>
 </ul>
 
-<p>See the <a href="./privacy.html">Privacy Policy</a> and <a href="./terms.html">Terms of Service</a>.</p>
+<h2>Google API compliance</h2>
+<p>This application's use and transfer of information received from Google APIs adheres to the
+<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services
+User Data Policy</a>, including the Limited Use requirements.</p>
+
+<h2>Artificial intelligence</h2>
+<p>The application uses a large language model to summarize and draft text for its owner. It does
+<strong>not</strong> use Google APIs or Google user data to generate, create, or distribute
+AI-generated non-consensual intimate imagery (NCII), or any other prohibited content. It does
+<strong>not</strong> use Google user data to develop, improve, or train generalized artificial
+intelligence or machine-learning models.</p>
+
+<h2>Privacy and terms</h2>
+<p>Full detail is in the <a href="./privacy.html">Privacy Policy</a>, which describes what data is
+accessed, how it is used and stored, how long it is kept, and how to revoke access or request
+deletion. Use of the application is governed by the <a href="./terms.html">Terms of Service</a>.</p>
+
+<h2>Contact</h2>
+<p>Questions about the application or this site:
+<a href="mailto:scott.jensen2@gmail.com">scott.jensen2@gmail.com</a></p>
 
 <footer>
-  Contact: <a href="mailto:scott.jensen2@gmail.com">scott.jensen2@gmail.com</a><br>
+  <a href="./privacy.html">Privacy Policy</a> · <a href="./terms.html">Terms of Service</a><br>
   Last updated: November 23, 2026
 </footer>
 
